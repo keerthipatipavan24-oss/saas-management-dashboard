@@ -1,0 +1,686 @@
+
+/* ========================================
+   Customers Page
+======================================== */
+
+.customers-page {
+  width: calc(100% - 270px);
+  min-width: 0;
+  margin-left: 270px;
+  margin-top: 76px;
+  min-height: 100%;
+  padding: 24px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.customers-page *,
+.customers-page *::before,
+.customers-page *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   Section 1: Page Heading
+======================================== */
+
+.customers-header {
+  margin-bottom: 24px;
+}
+
+.customers-header h1 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.customers-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   Section 1: Summary Cards
+======================================== */
+
+.customer-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.customer-summary-card {
+  min-width: 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.customer-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+} 
+
+.customer-summary-card h3 {
+  margin: 0 0 16px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.customer-summary-card h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   Section 2: Customers List
+======================================== */
+
+.customers-list-section {
+  width: 100%;
+  min-width: 0;
+  margin-top: 28px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.customers-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.customers-list-header h2 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.customers-list-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.customer-count {
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Search and filters */
+
+.customers-list-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px 170px;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 20px;
+}
+
+.customers-list-controls input,
+.customers-list-controls select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.customers-list-controls input:focus,
+.customers-list-controls select:focus {
+  outline: none;
+  border-color: #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.12);
+}
+
+/* Customer table */
+
+.customers-table-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.customers-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.customers-table th,
+.customers-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.customers-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+
+.customers-table td {
+  color: #334155;
+}
+
+.customers-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.customer-name {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.customer-email {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.customer-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.customers-empty {
+  padding: 28px !important;
+  color: #64748b !important;
+  text-align: center;
+}
+
+.customer-view-button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.customer-view-button:hover {
+  background: #2058c7;
+}
+
+/* Pagination Footer */
+.customers-pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.customers-results-count {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Pagination Buttons */
+.customers-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.customers-pagination button {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d5dce5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.customers-pagination button:hover:not(:disabled):not(.active) {
+  background: #eef4ff;
+}
+
+.customers-pagination button.active {
+  background: #2f6fed;
+  border-color: #2f6fed;
+  color: #ffffff;
+}
+
+.customers-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Modal Background */
+.customer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+/* Modal Container */
+.customer-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: customerModalOpen 0.2s ease;
+}
+
+@keyframes customerModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal Header */
+.customer-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.customer-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.customer-modal-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #64748b;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.customer-modal-close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Modal Details */
+.customer-modal-body {
+  padding: 12px 22px;
+}
+
+.customer-modal-body p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+  color: #475569;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.customer-modal-body strong {
+  color: #1e293b;
+}
+
+/* Modal Footer */
+.customer-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.customer-modal-footer button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.customer-modal-footer button:hover {
+  background: #2058c7;
+} 
+
+
+/* ========================================
+   Tablet / Small Desktop: 769px–1024px
+======================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .customers-page {
+    width: calc(100% - 240px);
+    margin-left: 240px;
+    margin-top: 76px;
+    padding: 18px;
+  }
+
+  .customer-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .customer-summary-card {
+    padding: 16px;
+  }
+
+  .customer-summary-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .customer-summary-card h2 {
+    font-size: 23px;
+  }
+
+  .customers-list-section {
+    padding: 16px;
+  }
+
+  .customers-list-controls {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .customers-list-controls input {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========================================
+   Tablet: 601px–768px
+   Sidebar width: 200px
+   Header height: 120px
+======================================== */
+@media (min-width: 601px) and (max-width: 768px) {
+  .customers-page {
+    width: calc(100% - 200px);
+    margin-left: 220px;
+    margin-top: 120px;
+    padding: 12px;
+  }
+
+  .customers-header {
+    margin-bottom: 16px;
+  }
+
+  .customers-header h1 {
+    font-size: 21px;
+  }
+
+  .customers-header p {
+    font-size: 13px;
+  }
+
+  .customer-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .customer-summary-card {
+    padding: 12px;
+  }
+
+  .customer-summary-card h3 {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .customer-summary-card h2 {
+    font-size: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .customers-list-section {
+    margin-top: 18px;
+    padding: 12px;
+  }
+
+  .customers-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .customers-list-header h2 {
+    font-size: 17px;
+  }
+
+  .customers-list-header p,
+  .customer-count {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .customers-list-controls {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .customers-list-controls input {
+    grid-column: auto;
+  }
+
+  .customers-list-controls input,
+  .customers-list-controls select {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .customers-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .customers-table {
+    min-width: 650px;
+  }
+
+  .customers-table th,
+  .customers-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   Mobile: 600px and below
+   Header height: 120px
+======================================== */
+@media (max-width: 600px) {
+  .customers-page {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 14px;
+  }
+
+  .customers-header {
+    margin-bottom: 18px;
+  }
+
+  .customers-header h1 {
+    font-size: 23px;
+  }
+
+  .customers-header p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .customer-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .customer-summary-card {
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .customer-summary-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .customer-summary-card h2 {
+    font-size: 23px;
+  }
+
+  .customers-list-section {
+    width: 100%;
+    min-width: 0;
+    margin-top: 18px;
+    padding: 14px;
+  }
+
+  .customers-list-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .customers-list-header h2 {
+    font-size: 18px;
+  }
+
+  .customers-list-header p,
+  .customer-count {
+    font-size: 13px;
+  }
+
+  .customers-list-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .customers-list-controls input {
+    grid-column: auto;
+  }
+
+  .customers-list-controls input,
+  .customers-list-controls select {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .customers-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .customers-table {
+    width: 100%;
+    min-width: 650px;
+  }
+
+  .customers-table th,
+  .customers-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .customers-pagination-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .customers-pagination {
+    justify-content: flex-start;
+  }
+
+  .customer-modal-header,
+  .customer-modal-body,
+  .customer-modal-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .customer-modal-header h2 {
+    font-size: 18px;
+  }
+  
+}

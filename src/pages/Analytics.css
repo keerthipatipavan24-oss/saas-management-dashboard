@@ -1,0 +1,1059 @@
+
+/* =========================================
+   ANALYTICS PAGE - DESKTOP DEFAULT
+========================================= */
+
+.analytics-page {
+  width: calc(100% - 270px);
+  max-width: calc(100% - 270px);
+  min-width: 0;
+  margin-left: 270px;
+  margin-top: 76px;
+  padding: 24px 26px;
+  color: #1f2937;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.analytics-page *,
+.analytics-page *::before,
+.analytics-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+
+.analytics-header h1 {
+  margin: 0 0 7px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.analytics-header p,
+.analytics-section-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FILTER SECTION AND PANELS
+========================================= */
+
+.analytics-filter-section,
+.analytics-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 18px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.analytics-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+  min-width: 0;
+}
+
+.analytics-section-heading h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.analytics-date-label {
+  padding: 7px 10px;
+  color: #4f46e5;
+  background: #eef2ff;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================
+   DATE FILTERS
+========================================= */
+
+.analytics-date-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.analytics-range-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.analytics-range-options button {
+  padding: 9px 13px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.analytics-range-options button:hover {
+  border-color: #6366f1;
+  transform: translateY(-1px);
+}
+
+.analytics-range-options button.active {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+.analytics-custom-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.analytics-custom-dates label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.analytics-custom-dates input {
+  width: 155px;
+  max-width: 100%;
+  min-height: 38px;
+  padding: 7px 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  color: #1f2937;
+  background: #ffffff;
+  font: inherit;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.analytics-summary-section {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 22px;
+}
+
+.analytics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.analytics-summary-card {
+  min-width: 0;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analytics-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 13px rgba(15, 23, 42, 0.08);
+}
+
+.analytics-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 12px;
+  border-radius: 9px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.users-icon {
+  background: #e0e7ff;
+}
+
+.customers-icon {
+  background: #d1fae5;
+}
+
+.subscriptions-icon {
+  background: #fef3c7;
+}
+
+.value-icon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.plans-icon {
+  background: #f3e8ff;
+}
+
+.analytics-summary-card > p {
+  min-height: 32px;
+  margin: 0 0 7px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.analytics-summary-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(17px, 1.35vw, 22px);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.analytics-summary-card > span {
+  display: block;
+  color: #6b7280;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   REGISTRATION TREND LEGEND
+========================================= */
+
+.analytics-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.analytics-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.analytics-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.legend-users {
+  background: #6366f1;
+}
+
+.legend-customers {
+  background: #10b981;
+}
+
+/* =========================================
+   REGISTRATION TREND CHART
+========================================= */
+
+.analytics-trend-chart {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+  min-height: 190px;
+  padding-top: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.analytics-trend-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.analytics-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: 150px;
+}
+
+.analytics-bar {
+  width: min(38%, 14px);
+  min-height: 0;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.25s ease;
+}
+
+.analytics-trend-column > span {
+  padding-bottom: 7px;
+  color: #6b7280;
+  font-size: 9px;
+  white-space: nowrap;
+  transform: rotate(-25deg);
+}
+
+/* =========================================
+   SUBSCRIPTIONS BY PLAN
+========================================= */
+
+.analytics-plan-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.analytics-plan-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.analytics-plan-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #374151;
+  font-size: 13px;
+}
+
+.analytics-plan-label strong {
+  font-weight: 700;
+}
+
+.analytics-plan-track {
+  overflow: hidden;
+  width: 100%;
+  height: 10px;
+  background: #eef2f7;
+  border-radius: 10px;
+}
+
+.analytics-plan-fill {
+  height: 100%;
+  background: #6366f1;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* =========================================
+   COMPARISON CARDS
+========================================= */
+
+.analytics-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.analytics-comparison-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.analytics-comparison-card p {
+  margin: 0 0 9px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.analytics-comparison-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.analytics-comparison-card span {
+  color: #6b7280;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   EMPTY STATE AND NOTES
+========================================= */
+
+.analytics-empty-state {
+  padding: 24px 14px;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.analytics-empty-state h3 {
+  margin: 0 0 7px;
+  font-size: 15px;
+}
+
+.analytics-empty-state p,
+.analytics-note {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.analytics-disclaimer {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Prevent children from forcing page overflow */
+
+.analytics-page img,
+.analytics-page svg,
+.analytics-page canvas {
+  max-width: 100%;
+}
+
+.analytics-page table {
+  max-width: 100%;
+}
+
+.analytics-page .table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Usage Analytics - Recent Activity */
+
+.usage-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.usage-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.usage-activity-item:last-child {
+  border-bottom: none;
+}
+
+.usage-activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #218838;
+  font-weight: 700;
+}
+
+.usage-activity-details {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.usage-activity-details strong {
+  font-size: 14px;
+}
+
+.usage-activity-details span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.usage-activity-time {
+  color: #6b7280;
+  font-size: 12px;
+  text-align: right;
+}
+
+
+/* =========================================
+   TABLET: 768px–1100px
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .analytics-page {
+    width: calc(100% - 240px);
+    max-width: calc(100% - 240px);
+    margin-left: 270px;
+    margin-top: 76px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .analytics-header h1 {
+    font-size: 23px;
+  }
+
+  .analytics-summary-grid,
+  .analytics-comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .analytics-filter-section,
+  .analytics-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .analytics-section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .analytics-date-controls,
+  .analytics-range-options {
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .analytics-custom-dates {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .analytics-custom-dates label,
+  .analytics-custom-dates input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .analytics-summary-card,
+  .analytics-comparison-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-trend-chart {
+    overflow-x: auto;
+  }
+}
+
+/* =========================================
+   SMALL TABLET: 601px–767px
+========================================= */
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .analytics-page {
+    width: calc(100% - 200px);
+    max-width: calc(100% - 200px);
+    margin-left: 200px;
+    margin-top: 120px;
+    padding: 16px;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .analytics-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .analytics-header h1 {
+    font-size: 22px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-header p,
+  .analytics-section-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .analytics-filter-section,
+  .analytics-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+  }
+
+  .analytics-section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .analytics-section-heading h2 {
+    font-size: 17px;
+  }
+
+  .analytics-range-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .analytics-range-options button {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 6px;
+    font-size: 12px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-custom-dates {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .analytics-custom-dates label,
+  .analytics-custom-dates input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .analytics-summary-grid,
+  .analytics-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .analytics-summary-card,
+  .analytics-comparison-card {
+    min-width: 0;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-summary-card h3 {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-summary-card > p,
+  .analytics-comparison-card p {
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-summary-card > span,
+  .analytics-comparison-card span {
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-comparison-card strong {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-trend-chart {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(28px, 1fr));
+    gap: 5px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .analytics-bars {
+    height: 120px;
+    gap: 3px;
+  }
+
+  .analytics-trend-column > span {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .analytics-plan-chart,
+  .analytics-plan-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .analytics-plan-label {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .usage-activity-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .usage-activity-details {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .usage-activity-time {
+    width: 100%;
+    padding-left: 46px;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================
+   MOBILE: 401px–600px
+========================================= */
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .analytics-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .analytics-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .analytics-header h1 {
+    font-size: 21px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .analytics-filter-section,
+  .analytics-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  .analytics-section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .analytics-section-heading h2 {
+    font-size: 16px;
+  }
+
+  .analytics-section-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .analytics-date-label {
+    max-width: 100%;
+    font-size: 11px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-range-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    width: 100%;
+  }
+
+  .analytics-range-options button {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 5px;
+    font-size: 11px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-custom-dates {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .analytics-custom-dates label,
+  .analytics-custom-dates input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .analytics-summary-grid,
+  .analytics-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .analytics-summary-card,
+  .analytics-comparison-card {
+    min-width: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-card-icon {
+    width: 29px;
+    height: 29px;
+    font-size: 14px;
+  }
+
+  .analytics-summary-card > p,
+  .analytics-comparison-card p {
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-summary-card h3 {
+    font-size: clamp(15px, 4vw, 19px);
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-summary-card > span,
+  .analytics-comparison-card span {
+    font-size: 10px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-comparison-card strong {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-trend-chart {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(27px, 1fr));
+    gap: 4px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .analytics-bars {
+    height: 100px;
+  }
+
+  .analytics-trend-column > span {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .analytics-plan-chart {
+    width: 100%;
+    min-width: 0;
+    gap: 14px;
+  }
+
+  .analytics-plan-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .analytics-plan-label {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .usage-activity-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 9px;
+    min-width: 0;
+  }
+
+  .usage-activity-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .usage-activity-details {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .usage-activity-details strong {
+    font-size: 13px;
+  }
+
+  .usage-activity-details span {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .usage-activity-time {
+    width: 100%;
+    padding-left: 41px;
+    font-size: 11px;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE: 400px AND BELOW
+========================================= */
+
+@media (max-width: 400px) {
+  .analytics-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .analytics-header h1 {
+    font-size: 20px;
+  }
+
+  .analytics-filter-section,
+  .analytics-panel {
+    padding: 10px;
+  }
+
+  .analytics-summary-grid,
+  .analytics-comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .analytics-summary-card,
+  .analytics-comparison-card {
+    min-width: 0;
+    padding: 9px;
+  }
+
+  .analytics-summary-card h3 {
+    font-size: 16px;
+  }
+
+  .analytics-summary-card > p,
+  .analytics-summary-card > span,
+  .analytics-comparison-card p,
+  .analytics-comparison-card span {
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-comparison-card strong {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  .analytics-range-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-range-options button {
+    min-height: 36px;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+
+  .analytics-custom-dates label,
+  .analytics-custom-dates input {
+    font-size: 12px;
+  }
+
+  .analytics-trend-chart {
+    grid-template-columns: repeat(14, minmax(25px, 1fr));
+    overflow-x: auto;
+  }
+
+  .analytics-bars {
+    height: 85px;
+  }
+
+  .usage-activity-time {
+    padding-left: 0;
+    font-size: 10px;
+  }
+}

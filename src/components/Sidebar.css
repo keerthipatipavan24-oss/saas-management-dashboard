@@ -1,0 +1,166 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100vh;
+  background: #2f3a46;
+  padding: 25px 18px;
+  box-sizing: border-box;
+  z-index: 1000;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.sidebar-logo {
+  padding: 0 12px;
+  margin-bottom: 35px;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  color: #d8dee5;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: inherit;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.sidebar-link:hover {
+  background: #3c4855;
+  color: #ffffff;
+}
+
+.sidebar-link.active {
+  background: #ffffff;
+  color: #2f3a46;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Tablet: 601px–767px */
+@media (max-width: 767px) and (min-width: 601px) {
+  .sidebar {
+    width: 200px;
+    padding: 20px 12px;
+  }
+
+  .sidebar-logo {
+    padding: 0 8px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-logo h2 {
+    font-size: 20px;
+  }
+
+  .sidebar-link {
+    gap: 8px;
+    padding: 11px 8px;
+    font-size: 14px;
+  }
+
+  .sidebar-icon {
+    width: 20px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet: 768px–900px */
+@media (max-width: 900px) and (min-width: 768px) {
+  .sidebar {
+    width: 240px;
+    padding: 22px 14px;
+  }
+
+  .sidebar-logo h2 {
+    font-size: 22px;
+  }
+
+  .sidebar-link {
+    padding: 12px 10px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 120px 0 0;
+    padding: 18px 14px;
+    z-index: 1000;
+  }
+
+  .sidebar-logo {
+    padding: 0 8px;
+    margin-bottom: 18px;
+  }
+
+  .sidebar-logo h2 {
+    font-size: 22px;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .sidebar-link {
+    min-width: 0;
+    padding: 11px 9px;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .sidebar-icon {
+    width: 20px;
+    font-size: 16px;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .sidebar {
+    padding: 16px 10px;
+  }
+
+  .sidebar-link {
+    padding: 10px 7px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .sidebar-icon {
+    width: 18px;
+    font-size: 14px;
+  }
+}
