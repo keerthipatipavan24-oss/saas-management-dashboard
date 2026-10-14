@@ -248,7 +248,7 @@ export default function Customers() {
             {filteredCustomers.length} Customers
           </span>
         </div>
-
+ 
         {/* Search and Filters */}
         <div className="customers-list-controls">
           <input
