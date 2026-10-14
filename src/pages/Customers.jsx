@@ -257,7 +257,8 @@ export default function Customers() {
             aria-label="Search customers"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-          />
+            autoComplete="off"
+          /> 
 
           <select
             aria-label="Filter by customer status"
